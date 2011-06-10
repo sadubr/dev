@@ -8,7 +8,45 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="wrap">
+
+  <div id="topo" class="clear">
+    <div id="logo">Logo</div>
+
+    <div id="login-nav">
+      <% if client_signed_in?  %>
+
+        <span>Olá : <strong><%= current_client.name %></strong></span>
+
+      <hr />
+
+
+        <%= link_to "Editar", href="/clients/edit" %> |
+        <%= link_to "Logout", href="/clients/sign_out" %>
+      <% else %>
+        <%= link_to "Login", href="/clients/sign_in" %>
+      <% end %>
+
+    </div>
+  </div>
+
+  <hr / class="clear">
+
+  <div id="conteudo" class="clear">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </div>
+
+  <hr />
+
+  <div id="footer" class="clear">
+    <div align="center"> footer</div>
+  </div>
+<div>
+
+
 
 </body>
 </html>
+

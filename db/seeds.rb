@@ -6,7 +6,3 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
-    clients = Client.create :name => "Vitor", :email => "vitorfran@gmail.com", :password => "1234"
-    clients = Client.create :name => "Vivian", :email => "vivivips@gmail.com", :password => "1234"
-    clients = Client.create :name => "Desirre", :email => "desirre@gmail.com", :password => "1234"
-

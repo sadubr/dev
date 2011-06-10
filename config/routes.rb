@@ -1,6 +1,6 @@
 Dev::Application.routes.draw do
 
-  resources :clients
+  devise_for :clients
 
   root :to => "pages#index"
   get "pages/index"

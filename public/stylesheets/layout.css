@@ -1,0 +1,6 @@
+.clear{clear:both}
+#topo{height:70px;}
+#topo #logo{float:left}
+#topo #login-nav{float:right; height:70px;}
+#conteudo{height:500px;}
+
