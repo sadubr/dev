@@ -9,6 +9,9 @@ gem 'sqlite3'
 # Authentication with Devise
 gem 'devise'
 
+#heroku gem
+gem "heroku"
+
 
 group :test do
 
