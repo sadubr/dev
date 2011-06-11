@@ -31,7 +31,7 @@
   </div>
 
   <hr / class="clear">
-
+  <% if client_signed_in?  %> <p><%= current_client.tipo %><p> <% end %>
   <div id="conteudo" class="clear">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

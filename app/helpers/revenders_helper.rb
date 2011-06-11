@@ -1,0 +1,2 @@
+module RevendersHelper
+end

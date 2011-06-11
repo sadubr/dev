@@ -1,5 +1,17 @@
 Dev::Application.routes.draw do
 
+  get "dashboard/index"
+
+
+  namespace :revendedor do
+    root :to => "dashboard#index"
+    resources :revenders
+  end
+
+
+
+  resources :people
+
   devise_for :clients
 
   root :to => "pages#index"

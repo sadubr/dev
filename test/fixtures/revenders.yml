@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  cpf: MyString
+  cnpj: MyString
+  rua: MyString
+  complemento: MyString
+  numero: MyString
+  client: 
+
+two:
+  nome: MyString
+  cpf: MyString
+  cnpj: MyString
+  rua: MyString
+  complemento: MyString
+  numero: MyString
+  client: 

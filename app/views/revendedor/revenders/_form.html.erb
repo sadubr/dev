@@ -1,0 +1,45 @@
+<%= form_for [:revendedor, @revender] do |f| %>
+  <% if @revender.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@revender.errors.count, "error") %> prohibited this revender from being saved:</h2>
+
+      <ul>
+      <% @revender.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :cpf %><br />
+    <%= f.text_field :cpf %>
+  </div>
+  <div class="field">
+    <%= f.label :cnpj %><br />
+    <%= f.text_field :cnpj %>
+  </div>
+  <div class="field">
+    <%= f.label :rua %><br />
+    <%= f.text_field :rua %>
+  </div>
+  <div class="field">
+    <%= f.label :complemento %><br />
+    <%= f.text_field :complemento %>
+  </div>
+  <div class="field">
+    <%= f.label :numero %><br />
+    <%= f.text_field :numero %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :client_id, :value => current_client.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

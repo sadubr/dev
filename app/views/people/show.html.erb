@@ -1,0 +1,20 @@
+<p>
+  <b>Nome:</b>
+  <%= @person.nome %>
+</p>
+
+<p>
+  <b>Sexo:</b>
+  <%= @person.sexo %>
+</p>
+
+<p>
+  <b>Cpf:</b>
+  <%= @person.cpf %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
+

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  sexo: MyString
+  cpf: MyString
+  client: 
+
+two:
+  nome: MyString
+  sexo: MyString
+  cpf: MyString
+  client: 
