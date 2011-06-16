@@ -1,0 +1,8 @@
+<% if current_client.present?  %>
+
+  <p>Ola Revendedor</p> <%= link_to 'painel do revendedor',revendedor_revenders_path %>
+  <% end %>
+
+
+<% if client_signed_in?  %> <p><%= current_client.tipo %><p> <% end %>
+

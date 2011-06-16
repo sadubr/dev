@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Dev</title>
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'layout', 'index' %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
@@ -11,28 +11,30 @@
 <div id="wrap">
 
   <div id="topo" class="clear">
-    <div id="logo">Logo</div>
-
-    <div id="login-nav">
+    <div id='login-nav-top-bar'>
       <% if client_signed_in?  %>
-
-        <span>Olá : <strong><%= current_client.name %></strong></span>
-
-      <hr />
-
-
-        <%= link_to "Editar", href="/clients/edit" %> |
-        <%= link_to "Logout", href="/clients/sign_out" %>
+          <span>Olá : <strong><%= current_client.name %></strong></span>
+          <span class='right'>
+            <%= link_to "Editar", href="/clients/edit" %> |
+            <%= link_to "Logout", href="/clients/sign_out" %>
+          </span>
       <% else %>
-        <%= link_to "Login", href="/clients/sign_in" %>
+          <%= link_to "Login", href="/clients/sign_in" %>
       <% end %>
+    </div>
+    <div id='login-nav-bottom-bar'>
 
     </div>
+    <div id="logo">Logo</div>
+
+
   </div>
 
   <hr / class="clear">
-  <% if client_signed_in?  %> <p><%= current_client.tipo %><p> <% end %>
+
+
   <div id="conteudo" class="clear">
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>

@@ -1,0 +1,38 @@
+<%= form_for [:pessoafisica, @person] do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% @person.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :sexo %><br />
+    <%= f.select :sexo, %w{ Male Female }  %>
+  </div>
+  <div class="field">
+    <%= f.label :cpf %><br />
+    <%= f.text_field :cpf %>
+  </div>
+
+
+  <div class="field">
+    <% f.hidden_field  :client_id, :value => current_client.id %>
+  </div>
+
+  <p> Contato </p>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

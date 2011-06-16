@@ -3,13 +3,17 @@ class Revendedor::RevendersController < Revendedor::RevendedorController
   before_filter :auth_tipo
 
   def auth_tipo
-    current_client.tipo != "Revendedor"
-    redirect_to  '/error'
+    if current_client.tipo != "Revendedor"
+      redirect_to  root_path
+      flash[:notice] = 'Desculpe vc nao tem permiçao para ser Revendedor'
+    end
+
   end
   # GET /revenders
   # GET /revenders.xml
   def index
-    @revenders = Revender.all
+    #@revenders = Revender.all
+    @revenders = Revender.find([client_id = current_client.id])
 
     respond_to do |format|
       format.html # index.html.erb

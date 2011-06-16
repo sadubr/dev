@@ -1,5 +1,7 @@
 Dev::Application.routes.draw do
 
+
+
   get "dashboard/index"
 
 
@@ -8,9 +10,22 @@ Dev::Application.routes.draw do
     resources :revenders
   end
 
+  namespace :pessoafisica do
+    root :to => "dashboard#index"
+    resources :people
+  end
+
+  namespace :servico do
+    root :to => "dashboard#index"
+    resources :services
+  end
+
+
 
 
   resources :people
+  resources :revenders
+  resources :services
 
   devise_for :clients
 

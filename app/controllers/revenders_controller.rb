@@ -1,14 +1,6 @@
 class RevendersController < ApplicationController
-  # GET /revenders
-  # GET /revenders.xml
-  def index
-    @revenders = Revender.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @revenders }
-    end
-  end
+  before_filter :load_resources
 
   # GET /revenders/1
   # GET /revenders/1.xml
@@ -32,10 +24,7 @@ class RevendersController < ApplicationController
     end
   end
 
-  # GET /revenders/1/edit
-  def edit
-    @revender = Revender.find(params[:id])
-  end
+
 
   # POST /revenders
   # POST /revenders.xml
@@ -53,31 +42,11 @@ class RevendersController < ApplicationController
     end
   end
 
-  # PUT /revenders/1
-  # PUT /revenders/1.xml
-  def update
-    @revender = Revender.find(params[:id])
-
-    respond_to do |format|
-      if @revender.update_attributes(params[:revender])
-        format.html { redirect_to(@revender, :notice => 'Revender was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @revender.errors, :status => :unprocessable_entity }
-      end
-    end
+protected
+  def load_resources
+    @clients = Client.all
   end
 
-  # DELETE /revenders/1
-  # DELETE /revenders/1.xml
-  def destroy
-    @revender = Revender.find(params[:id])
-    @revender.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(revenders_url) }
-      format.xml  { head :ok }
-    end
-  end
 end
+

@@ -1,0 +1,34 @@
+<h1>Listing services</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Cnpj</th>
+    <th>Rua</th>
+    <th>Numero</th>
+    <th>Especialidade</th>
+    <th>Client</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @services.each do |service| %>
+  <tr>
+    <td><%= service.name %></td>
+    <td><%= service.cnpj %></td>
+    <td><%= service.rua %></td>
+    <td><%= service.numero %></td>
+    <td><%= service.especialidade %></td>
+    <td><%= service.id %></td>
+    <td><%= link_to 'Show', servico_service_path(service) %></td>
+    <td><%= link_to 'Edit', edit_servico_service_path(service) %></td>
+    <td><%= link_to 'Destroy', service, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Service', new_servico_service_path %>
+

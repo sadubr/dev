@@ -1,2 +1,15 @@
-<p>Pages#index</p>
+<% stylesheet_link_tag "index" %>
+
+<% if current_client.present? %>
+  <p> <%= current_client.tipo %> </p>
+  <p> <%= current_client.id %> </p>
+ <% else %>
+  <p> nao tem </p>
+ <% end %>
+
+<div id='section-a'> <span> Publique tambem seu veiculo aqui -- </span> </div>
+<hr />
+<div id='section-b'> content section b</div>
+<hr />
+<div id='section-c'> content section c</div>
 

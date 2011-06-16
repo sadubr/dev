@@ -1,5 +1,7 @@
 <h1>Listing revenders</h1>
 
+<%= current_client.tipo %>
+
 <table>
   <tr>
     <th>Nome</th>
@@ -22,7 +24,7 @@
     <td><%= revender.rua %></td>
     <td><%= revender.complemento %></td>
     <td><%= revender.numero %></td>
-    <td><%= current_client.name %></td>
+    <td><%= revender.id %></td>
 
     <td><%= link_to 'Show', revendedor_revender_path(revender) %></td>
     <td><%= link_to_edit [:revendedor, revender] %></td>

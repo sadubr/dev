@@ -1,6 +1,21 @@
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+strong{color:#f87a17}
+
 .clear{clear:both}
-#topo{height:70px;}
+.left{float:left}
+.right{float:right}
+#topo{height:150px; background:#282117;color:#fff;}
+#topo a{color:#fff}
+#topo #login-nav-top-bar{height:50px;background:#333;display:block;}
 #topo #logo{float:left}
-#topo #login-nav{float:right; height:70px;}
-#conteudo{height:500px;}
+#topo #login-nav-bottom-bar{height:60px;background:#edebcb;display:block;position:relative; bottom:-20px}
+#footer{display:block;height:200px;background:#333;}
+#conteudo{}
 
